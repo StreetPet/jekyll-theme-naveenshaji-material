@@ -23,21 +23,56 @@
 
 
 # Site settings
-title: material
-email: naveen@pixelblenders.com
+title: Street Pet
+email: streetpet@carlosdelfino.eti.br
 description: > # this means to ignore newlines until "baseurl:"
-  Hello, I'm Naveen, a freelance front-end developer
-  and UI designer. Check out my projects on GitHub
-baseurl: "/material/" # the subpath of your site, e.g. /blog/
-url: "http://naveenshaji.github.io/material" # the base hostname & protocol for your site
-twitter_username: navvenshady
-github_username:  naveenshaji
+  Sistema de Apoio e Amparo a Animais Abandonados!
+baseurl: "/" # the subpath of your site, e.g. /blog/
+#url: "https://streetpet.web.app" # the base hostname & protocol for your site
+twitter_username: streetpet
+github_username:  streetpet
 css: "cyan"
 scroll-cursor: "#00BCD4"
 scroll-rail: "#0097A7"
+
+# Social and analytics
+google:
+  analytics:
+      id: UA-156621148
+      domain:
+  adsense:
+      client: ca-pub-1710447158146560
+      slot: 8511319937
 
 # Build settings
 markdown: kramdown
 highlighter: null #pygments
 lsi: false
 safe: false
+
+# Firebase and Tools
+
+angular_version: 1.2.21
+bootstrap_version: 3.2.0
+jquery_version: 1.11.1
+firebase_version: 1.0.18
+angularfire_version: 2.3.0
+firebase_url: "https://street-pet.firebaseio.com/"
+
+plugins:
+ - jekyll-github-metadata
+ - jekyll-feed
+ - jekyll-paginate
+ - jekyll-sitemap
+ - jekyll-mentions
+ - jekyll-redirect-from
+ - jekyll-sass-converter
+ - jekyll-seo-tag
+ - jekyll-archives
+ - kramdown
+ - liquid
+ - rouge
+ - pygments
+ - jemoji
+ - sass
+ - safe_yaml

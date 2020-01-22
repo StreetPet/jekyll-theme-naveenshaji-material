@@ -1,8 +1,9 @@
 ---
-layout: post
-title: "Lorem Ipsum dolor 1"
-date: 2015-02-13 23:08:00
+layout: page
+title: Application Manager
+permalink: /manager/
 ---
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel purus sagittis, eleifend ante quis, tempus lectus. Vivamus maximus nibh lectus, sed gravida sapien imperdiet in. Curabitur non purus rutrum, iaculis mauris ac, placerat turpis. Donec vel semper enim, ut ultrices sem. Fusce rutrum, justo id porta malesuada, purus erat gravida metus, sit amet viverra turpis lacus nec mi. Aliquam et mi vel ipsum mollis aliquam eu eget augue. Morbi congue eros id nisl sagittis accumsan. Nam nec odio dolor.
 
 Integer accumsan, turpis a egestas malesuada, lorem ex blandit nulla, in condimentum lectus quam et dolor. Ut dapibus, sem et efficitur efficitur, urna turpis dictum tellus, non lacinia leo sem sit amet leo. Phasellus tortor dui, consectetur sed felis in, dapibus tincidunt nisi. Nam faucibus, dolor nec ultricies euismod, risus magna condimentum elit, et dictum lorem nunc eu orci. Mauris efficitur sollicitudin mi, nec condimentum nunc euismod vel. Integer ac dictum elit. Vivamus in dui ac arcu laoreet dictum.

@@ -152,7 +152,8 @@ $(function () {
                     }, 800);
 
                     $('ul.tabs').tabs();
-                    $mainContent.fadeIn(1000);
+                ]
+            $mainContent.fadeIn(1000);
 
 
                     calcScrollr();
