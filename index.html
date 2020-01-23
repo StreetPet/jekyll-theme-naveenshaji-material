@@ -12,7 +12,7 @@ layout: default
         </div>
     </div>
     <div class="container-fluid card {{ site.css }} z-depth-2 waves-effect waves-light">
-        <div class="cover z-depth-1" style="background-image: url('{{site.baseurl}}/img/1.jpg');">
+        <div class="cover z-depth-1" style="background-image: url('{{site.baseurl}}img/1.jpg');">
             <div class="filter {{site.css}}" style="opacity: 0.7;">
                 <div class="cover-text {{ site.css }}-text text-darken-4">
                     <h1><br>-Vantagens Deste Projeto-<br></h1>
@@ -51,6 +51,8 @@ layout: default
             </div>
         </div>
     </div>
+    {% for post in site.posts %}{% if post.step %}{% assign have_steps = true %}{% endif %}{%endfor%}
+    {% if have_steps %}
     <i class="mdi-navigation-arrow-drop-down" style="font-size: 200px;"></i>
     <div class="row">
         <h1><br>-Primeiros Passos-<br></h1>
@@ -82,4 +84,5 @@ layout: default
                 </div>
         {% endif %}{% endfor %}
     </div>
+    {% endif %}
 </div>

@@ -1,0 +1,20 @@
+{% if site.firebase.version %}
+{% if site.url contains 'app.web' or site.url contains 'xxxxxx' %}
+{% assign firebase_baseurl = "/__/firebase/" %}
+{% else %}
+{% assign firebase_baseurl = "https://www.gstatic.com/firebasejs/" %}
+{% endif %}
+<!-- update the version number as needed -->
+  <script defer src="{{firebase_baseurl}}{{site.firebase.version}}/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  {% if site.firebase.auth %}<script defer src="{{firebase_baseurl}}{{site.firebase.version}}/firebase-auth.js"></script>{% endif %}
+  {% if site.firebase.database %}<script defer src="{{firebase_baseurl}}{{site.firebase.version}}/firebase-database.js"></script>{% endif %}
+  {% if site.firebase.messaging %}<script defer src="{{firebase_baseurl}}{{site.firebase.version}}/firebase-messaging.js"></script>{% endif %}
+  {% if site.firebase.storage %}<script defer src="{{firebase_baseurl}}{{site.firebase.version}}/firebase-storage.js"></script>{% endif %}
+  <!-- initialize the SDK after all desired features are loaded -->
+  {% if site.url contains 'app.web' or site.url contains 'xxxxxx' %}
+  <script defer src="/__/firebase/init.js"></script>
+  {% else %}
+  <script  type="text/javascript" defer src="{{ site.baseurl }}js/firebase_init.js"></script>
+  {% endif %}
+{% endif %}

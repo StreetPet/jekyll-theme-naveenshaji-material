@@ -1,9 +1,7 @@
 ---
 layout: page
-title: Application
-permalink: /app/
-angular:
-  enable: true
+title: About
+permalink: /about/
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vel purus sagittis, eleifend ante quis, tempus lectus. Vivamus maximus nibh lectus, sed gravida sapien imperdiet in. Curabitur non purus rutrum, iaculis mauris ac, placerat turpis. Donec vel semper enim, ut ultrices sem. Fusce rutrum, justo id porta malesuada, purus erat gravida metus, sit amet viverra turpis lacus nec mi. Aliquam et mi vel ipsum mollis aliquam eu eget augue. Morbi congue eros id nisl sagittis accumsan. Nam nec odio dolor.
