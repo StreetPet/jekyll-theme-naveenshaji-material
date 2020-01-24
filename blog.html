@@ -16,7 +16,7 @@ permalink: /blog/
            <div class="card-content white-text">
               <div class="card-title">{{ post.title }}</div>
               <p>{{ post.date | date: "%b %-d, %Y" }}</p><br/>
-              {{ post.content | strip_html | truncatewords: 500}}
+              {{ post.excerpt | strip_html | truncatewords: 500}}
            </div>
            <div class="card-action {{ site.css }} darken-2">
               <button href="{{ post.url }}" class="{{ site.css }} darken-1 white-text text-darken-3 waves-effect waves-light btn">View Post</button>

@@ -7,7 +7,7 @@ layout: default
             <h1>Street Pet</h1>
             <br/>
             <h4><b>Estamos Trabalhando</b></h4>
-            <a target="_blank" href="http://github.com/streetpet" class="{{ site.css }} darken-2 white-text text-darken-3 waves-effect waves-light btn"><i class="mdi-action-get-app"></i> View on github</a><br>
+            <a target="_blank" href="http://github.com/streetpet" class="{{ site.css }} darken-2 white-text text-darken-3 waves-effect waves-light btn"><i class="mdi-action-get-app"></i> Se você é desenvolvedor de Softwares ou Maker, viste o projeto no github</a><br>
             <i class="mdi-navigation-arrow-drop-down" style="font-size: 200px;"></i>
         </div>
     </div>
@@ -74,7 +74,7 @@ layout: default
                         </div>
                         <div class="card-content white-text">
                             <div class="card-title">{{post.title}}</div>
-                            {{post.content}}
+                            {{ post.excerpt }}
                         </div>
                         <div class="card-action {{ site.css }} darken-2">
                             <button href="{{ post.url }}" class="{{ site.css }} darken-1 white-text text-darken-3 waves-effect waves-light btn">View Post</button>

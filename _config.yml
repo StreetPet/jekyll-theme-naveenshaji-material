@@ -21,7 +21,6 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 #THE SOFTWARE.
 
-
 # Site settings
 title: Street Pet
 email: streetpet@carlosdelfino.eti.br
@@ -55,10 +54,19 @@ safe: false
 angular_version: 1.2.21
 bootstrap_version: 3.2.0
 jquery_version: 1.11.1
-firebase_version: 1.0.18
 angularfire_version: 2.3.0
-firebase_url: "https://street-pet.firebaseio.com/"
 
+angular:
+  version: 1.2.21
+
+firebase:
+  version: 7.7.0
+  url: "https://street-pet.firebaseio.com/"
+  auth: true
+  database: true
+  messaging: true
+  storage: true
+  
 plugins:
  - jekyll-github-metadata
  - jekyll-feed
