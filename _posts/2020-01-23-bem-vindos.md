@@ -3,7 +3,7 @@ layout: post
 title:  "Seja Bem Vindo!"
 date:   2020-01-23 21:54:49
 excerpt_separator: <!--more-->
-cover: "{{site.baseurl}}/img/2.jpg"
+cover: "img/2.jpg"
 ---
 
 Seja bem vindo ao nosso projeto, este projeto foi feito para todos, e todos, principalmente os PETs serão beneficiados come este projeto.
