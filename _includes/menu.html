@@ -8,7 +8,7 @@
                 </li>
 
                 {% for item in site.data.menu.link %}
-                <li><a href="{{site.baseurl}}{{  item.url }}" alt="{{ item.title }}" {% if item.target %}target="{{ item.target }}"{% endif %}>{{ item.title }}</a></li>
+                <li><a href="{% if item.url contains 'http://' or item.url contains 'https://' %}{% else %}{{site.baseurl}}{% endif %}{{  item.url }}" alt="{{ item.title }}" {% if item.target %}target="{{ item.target }}"{% endif %}>{{ item.title }}</a></li>
                 {% endfor %}
     
                 <li><a href="#">Log In</a></li>
