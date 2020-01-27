@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<div id="comment-form" style="display: none;">
+  <button id="logout">Logout</button>
+  <h4><span id="comment-count"></span> Comments</h4>
+  <textarea id="comment-message" rows="8" placeholder="Comment"></textarea>
+  <button id="comment-form-submit">Submit</button>
+</div>
+  
+<div id="login-buttons" style="display: inherit;">
+  <h4>Login to comment</h4>
+  <button class="{{ site.css }} darken-2 white-text text-darken-3  waves-effect waves-cyan waves-light btn" data-auth-provider="google">Log In</button>
+</div>
+
+<div id="comments-list"></div>

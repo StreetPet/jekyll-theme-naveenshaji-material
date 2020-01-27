@@ -1,0 +1,74 @@
+<script>
+  var currentUser = null;
+
+  var loginClickHandler = function(event) {
+    event.preventDefault();
+    var nameProvider = $(this).data("auth-provider");
+    switch (nameProvider) {
+      case "google":
+        var provider = new firebase.auth.GoogleAuthProvider();
+        provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
+    }
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then(function(result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+        // Expand the user object to include profile photo and url
+        currentUser = {
+          uid: user.uid,
+          provider: nameProvider,
+          displayName: user.displayName,
+          picture: user.photoURL
+        };
+
+        if (user.emailVerfied) currentUser.email = user.email;
+
+        // User authenticated with Firebase
+        // Store user data in Firebase so we can display it on the comments
+        var fb = firebase.database().ref();
+        var userChild = fb.child("users").child(currentUser.uid);
+        userChild.set(currentUser);
+
+        $("#login-buttons").hide();
+        $("#login-menu").hide();
+        $("#logout-menu").show();
+        $("#comment-form").show();
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+    return false;
+  };
+</script>
+<script>
+  $(document).ready(function() {
+    // Handle login
+
+    $("#login-menu").click(loginClickHandler);
+
+    var logoutClickHandler = function(event) {
+      // User is logged out
+      currentUser = null;
+      firebase
+        .auth()
+        .signOut()
+        .then(function() {
+          $("#login-buttons").show();
+          $("#login-menu").show();
+          $("#logout-menu").hide();
+          $("#comment-form").hide();
+        })
+        .catch(function(error) {
+          // An error happened.
+          console.log(error);
+        });
+    };
+    $("#logout-menu").click(logoutClickHandler);
+    $("#logout").click(logoutClickHandler);
+   });
+</script>

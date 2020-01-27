@@ -11,9 +11,13 @@
                 <li><a href="{% if item.url contains 'http://' or item.url contains 'https://' %}{% else %}{{site.baseurl}}{% endif %}{{  item.url }}" alt="{{ item.title }}" {% if item.target %}target="{{ item.target }}"{% endif %}>{{ item.title }}</a></li>
                 {% endfor %}
     
-                <li><a href="#">Log In</a></li>
+                <li>
+                    <a id="login-menu"  data-auth-provider="google" >Log In</a>
+                    <a id="logout-menu" style="display: none;">Logout</a>
+                </li>
+                {%include firebase/login.html %}
             </ul>
-            <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+            <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a i>
         </div>
         </div>
     </nav>

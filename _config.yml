@@ -61,11 +61,10 @@ angular:
 
 firebase:
   version: 7.7.0
-  url: "https://street-pet.firebaseio.com/"
   auth: true
   database: true
   messaging: true
-  storage: true
+  storage: "https://street-pet.firebaseio.com/"
   
 plugins:
  - jekyll-github-metadata
