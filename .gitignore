@@ -4,3 +4,5 @@ _site
 
 app/voluntarios/
 app/manager/
+
+js/init-firebase.js
