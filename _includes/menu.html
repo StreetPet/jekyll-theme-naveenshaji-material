@@ -1,0 +1,20 @@
+<div class="navbar-fixed">
+    <nav class="{{ site.css }} darken-2 waves-effect waves-light">
+        <div class="nav-wrapper">
+           <div class="container">
+            <a internal href="{{ site.baseurl }}" class="brand-logo"><i class="mdi-communication-chat"></i> {{site.title}}</a>
+            <ul class="links">
+                <li><a internal href="{{ site.baseurl }}">Home</a>
+                </li>
+
+                {% for item in site.data.menu.link %}
+                <li><a href="{{site.baseurl}}{{  item.url }}" alt="{{ item.title }}" {% if item.target %}target="{{ item.target }}"{% endif %}>{{ item.title }}</a></li>
+                {% endfor %}
+    
+                <li><a href="#">Log In</a></li>
+            </ul>
+            <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+        </div>
+        </div>
+    </nav>
+</div>

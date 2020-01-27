@@ -1,0 +1,16 @@
+# menu
+main_menu: Menu
+link:
+- url: app/
+  title: App
+- url: app/manager/
+  title: Gerenciador
+- url: app/voluntarios/
+  title: Voluntários
+- url: blog/
+  title: Blog
+- url: about/
+  title: Sobre
+- url: http://github.com/{{site.github_username}}/
+  target: _blank
+  title: GitHub
