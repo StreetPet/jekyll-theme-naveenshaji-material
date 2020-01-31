@@ -14,6 +14,7 @@ gem "jekyll-feed", "~> 0.13.0"
 gem "jekyll-paginate", "~> 1.1"
 gem "jekyll-mentions", "~> 1.5"
 gem "jekyll-archives", "~> 2.2"
+gem 'jekyll-menus', '~> 0.6.1'
 
 gem 'wdm', '~> 0.1.1', :install_if => Gem.win_platform?
 

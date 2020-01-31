@@ -76,6 +76,7 @@ plugins:
  - jekyll-sass-converter
  - jekyll-seo-tag
  - jekyll-archives
+ - jekyll-menus
  - kramdown
  - liquid
  - rouge
