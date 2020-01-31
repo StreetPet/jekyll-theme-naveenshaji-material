@@ -46,3 +46,48 @@ Abaixo estão os projetos que utilizam este repositório, observe que alguns pro
 | [Angular](https://github.com/StreetPet/Angular) | ./images | Angular | Imagens serão utilizadas nos projetos de applicativos em Angular |
 | [Jekyll Theme - Naveeshaji Material](https://github.com/StreetPet/jekyll-theme-naveenshaji-material) | ./img |Jekyll_NaveeshajiMaterial | Imagens utilizadas no projeto de site principal feito com o SSG Jekyll acessível em https://streetpet.web.app e demais aplicações Angular https://streetpet.web.app/app, as imagens dos posts também estão armazenadas neste diretório e seus subdiretórios |
 
+## Como importar o projeto Usando Git Subtree
+
+### Adicionado o repositório
+
+O comando abaixo adiciona a pasta de trabalho onde será importado o repositório como SubTree, uma referência remota ao repositório, logo em seguida executa o fetch para que as ultimas atualizações estejam disponíveis localmente
+
+``` Bash
+$ git remote add BaseImages https://github.com/StreetPet/BaseImages
+$ git fetch BaseImages
+```
+
+Veja ele irá criar um branch especifico para armazenar somente as imagens, evite mecher neste branch diretamente a não ser que tenha certeza do que está fazendo.
+
+
+### Criando a pasta
+
+Agora certifique-se que a pasta ainda não existe no seu clone local, e que ele esteja limpo com todas as alterações depositadas adequadamente. Execute o comando abaixo na pasta base da repositório que conterá o subtree.
+
+```Bash
+$ git subtree add --squash --prefix=images/ BaseImages SeuBranchParaEsteRepositorio
+```
+
+Como pode ver ele irá criar uma pasta chamda images  onde você executou o comando, procure executa-lo no Raiz, da pasta de trabalho, de seu repositório local.
+
+Então ele usára a referência ao repostório remoto para obter os arquivos, veja que ele informa o Branch respectivo aos seu material de trablaho, portanto este branch deve já ter sido criado e atualizado localmente com o comando `git fetch`
+
+### Atualizando a Pasta
+
+Sempre que precisar obter novas imagens que foram adicionadas ao repositório use o comando na raiz de seu workspace do repositórioe em questão.
+
+```
+$ git subtree pull --squash  --prefix=images/ BaseImages SeuBranchParaEsteRepositorio
+```
+
+### Enviando alterações da Pasta
+
+O envio de novas imagens ou alteração deve somente ser feito pelos Designers e WebDesigners, veja com a liderança do projeto detalhes sobre tal procedimento.
+
+O comando é o seguinte:
+
+```
+git subtree push --prefix=images/ BaseImages SeuBranchParaEsteRepositorio
+```
+
+Claro que antes você deve ter feito o procedimento padrão com `git add arquivo` e `git commit` dentro da pasta `images/` para cada arquivo que alterou ou está adicionando.
