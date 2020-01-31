@@ -13,7 +13,8 @@ fields:
   label: date
 - type: text
   name: excerpt_separator
-  label: excerpt_separator
+  label: Excerpt Separator
+  hidden: true
 - type: file
   name: cover
   label: cover
