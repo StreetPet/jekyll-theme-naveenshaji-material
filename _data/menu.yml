@@ -3,10 +3,21 @@ main_menu: Menu
 link:
 - url: app/
   title: App
-- url: app/manager/
-  title: Gerenciador
 - url: app/voluntarios/
   title: Voluntários
+  description: Manutenção dos Voluntários do Projeto
+- url: app/pontos/
+  title: Pontos de Apoio
+  description: Manutenção dos Pontos de Apoio dos Projeto
+- url: app/pets/
+  title: Pets
+  description: Manutenção do Cadastro dos Pets
+- url: app/PetFriendly/
+  title: PetFriendly
+  description: Manutenção das empresas PetFriendly
+- url: https://petfriendly.web.app
+  title: PetFriendly
+  description: Mapa que exibe e permite interação com as Empresas PetFriendlies
 - url: blog/
   title: Blog
 - url: about/
