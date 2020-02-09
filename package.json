@@ -1,0 +1,29 @@
+{
+  "name": "jekyll-theme-naveenshaji-material",
+  "version": "0.0.1",
+  "description": "Projeto usado como base dos sites principais do StreetPet para os Usuários",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StreetPet/naveenshaji-jekyll-theme-material.git"
+  },
+  "author": "Carlos Delfino <consultoria@carlosdelfino.eti.br> (http://carlosdelfino.eti.br)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StreetPet/naveenshaji-jekyll-theme-material/issues"
+  },
+  "homepage": "https://github.com/StreetPet/naveenshaji-jekyll-theme-material#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-modernizr": "^2.1.0",
+    "grunt-svgmin": "^6.0.0"
+  }
+}
