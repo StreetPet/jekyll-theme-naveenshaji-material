@@ -6,4 +6,4 @@ node_modules/
 app/voluntarios/
 app/manager/
 
-js/init-firebase.js
+assets/js/init-firebase.js

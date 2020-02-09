@@ -61,7 +61,7 @@ jquery_version: 1.11.1
 
 angular:
   version: 1.2.21
-  angularfire: 2.3.0
+  firebase: 2.3.0
 
 firebase:
   version: 7.7.0

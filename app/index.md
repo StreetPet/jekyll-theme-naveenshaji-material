@@ -1,9 +1,7 @@
 ---
 layout: page
 title: Aplicações
-permalink: /app/
-angular:
-  enable: true
+permalink: /app/ 
 excerpt: <!--more-->
 ---
 

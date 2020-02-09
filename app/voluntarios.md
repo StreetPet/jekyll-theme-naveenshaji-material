@@ -8,7 +8,5 @@ redirect_from:
  - /app/voluntarios/add
 redirect_to:
  - /app/voluntarios/
-angular:
-  enable: true
 excerpt: <!--more-->
 --- 
