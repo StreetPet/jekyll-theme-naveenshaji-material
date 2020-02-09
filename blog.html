@@ -2,6 +2,7 @@
 layout: page 
 permalink: /blog/
 ---
+{% assign baseurl = site.baseurl | prepend: '/' | prepend: site.url  %}
 <!DOCTYPE html>
 <div class="" style="margin-top:20px;">
    <br/>&nbsp;
@@ -26,7 +27,7 @@ permalink: /blog/
 {% for post in site.posts %}
 <div class="scroll-1 blog">
 <div class="container-fluid card {{ site.css }} z-depth-2 waves-effect waves-light">
-   <div class="cover z-depth-1" style="{% if post.cover %}background-image: url('{{ site.baseurl }}{{ post.cover }}');{% endif %}">
+   <div class="cover z-depth-1" style="{% if post.cover %}background-image: url('{{ baseurl }}{{ post.cover }}');{% endif %}">
        <div class="filter {{site.css}}"></div>
    </div>
     <div class="card-content white-text">

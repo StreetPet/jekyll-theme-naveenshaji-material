@@ -11,7 +11,7 @@
         {{ content }}
     </article>
     <br/><hr/><br/>
-    <button class="{{ site.css }} darken-2 white-text text-darken-3 waves-effect waves-cyan waves-light btn" href="/blog/">Back Home</button>
+    {% assign baseurl = site.baseurl | prepend: '/' | prepend: site.url  %}    <button class="{{ site.css }} darken-2 white-text text-darken-3 waves-effect waves-cyan waves-light btn" href="{{baseurl}}blog/">Back Home</button>
     <br/>&nbsp;
     <br>
 </div>

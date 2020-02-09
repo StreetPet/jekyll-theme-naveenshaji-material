@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign baseurl = site.baseurl | prepend: '/' | prepend: site.url  %}
 <!DOCTYPE html>
 <div id="non-skrollr">
     <div class="container-fluid">
@@ -13,7 +14,7 @@ layout: default
         </div>
     </div>
     <div class="container-fluid card {{ site.css }} z-depth-2 waves-effect waves-light">
-        <div class="cover z-depth-1" style="background-image: url('{{site.baseurl}}img/1.jpg');">
+        <div class="cover z-depth-1" style="background-image: url('{{baseurl}}img/1.jpg');">
             <div class="filter {{site.css}}" style="opacity: 0.7;">
                 <div class="cover-text {{ site.css }}-text text-darken-4">
                     <h1><br>-Vantagens Deste Projeto-<br></h1>

@@ -12,9 +12,10 @@
   {% if site.firebase.messaging %}<script defer src="{{firebase_baseurl}}{{site.firebase.version}}/firebase-messaging.js"></script>{% endif %}
   {% if site.firebase.storage %}<script defer src="{{firebase_baseurl}}{{site.firebase.version}}/firebase-storage.js"></script>{% endif %}
   <!-- initialize the SDK after all desired features are loaded -->
-  {% if site.url contains 'app.web' or site.url contains 'xxxxxx' %}
+  {% if site.url contains 'app.web' %}
   <script defer src="/__/firebase/init.js"></script>
   {% else %}
-  <script  type="text/javascript" defer src="{{ site.baseurl }}js/init-firebase.js"></script>
+  {%assign baseurl = site.baseurl | prepend: '/' | prepend: site.url %}
+  <script  type="text/javascript" defer src="{{ baseurl }}js/init-firebase.js"></script>
   {% endif %}
 {% endif %}
