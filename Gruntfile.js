@@ -69,7 +69,7 @@ module.exports = function(grunt) {
         '!app/voluntarios/*.js'
       ],
       "customTests": [],
-      "dest": "js/modernizr.js",
+      "dest": "assets/js/modernizr/modernizr.js",
       "tests": [
         "applicationcache",
         "canvas",
