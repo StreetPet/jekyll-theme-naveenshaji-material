@@ -2,24 +2,41 @@
 <div class="navbar-fixed">
     <nav class="{{ site.css }} darken-2 waves-effect waves-light">
         <div class="nav-wrapper">
-           <div  class="container nav-wrapper" role="navigation" >
+           <div  id='navbar' class="container nav-wrapper collapse navbar-collapse" role="navigation" >
             <a internal href="{{ site.baseurl | prepend: '/' }}" class="brand-logo"><i class="mdi-communication-chat"></i> {{site.title}}</a>
 {%endif%}
 {%if menu %}
-            <ul {%if include.submenu %}id="menu"{%endif%} class="">
+  {% assign dropdown = nil %}
+  {%if include.submenu %}
+    <ul class="dropdown-menu">
+    {%else%}
+    <ul class="nav navbar-nav">
+  {%endif%} 
   {%for item in menu %}
-                <li class="menu-item-{{ loop.index }}">
+    {% assign active = nil %}
+    {% if page.url contains link.url %}
+        {% assign active = 'active' %}
+    {% endif %}
     {% assign menusize = item.sublinks | size %}
+    {% assign dropdown = nil %}
     {% if menusize > 0 %}
-                  <a  title="ir para {{ item.title }}" >{{ item.title }}</a>
+        {% assign dropdown = 'dropdown' %}
+    {% endif%}
+    {% if item.separator %}
+              <li role="separator" class="divider"></li>
     {% else %}
-                  <a  href="{{site.baseurl| prepend: '/' }}{{ item.url }}" title="ir para {{ item.title }}" >{{ item.title }}</a>
-    {% endif %}
-    {% if item.sublinks %}
-      {% assign menu = item.sublinks %}
-      {% include menu.html submenu=true %}
-    {% endif %}
+              <li class="menu-item-{{ loop.index }} {{dropdown}} {{active}}">
+      {% if menusize > 0 %}
+                  <a  title="ir para {{ item.title }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ item.title }}</a>
+      {% else %}
+                  <a  href="{{site.baseurl| prepend: '/' }}{{ item.url }}" title="ir para {{ item.title }}"  role="button" aria-haspopup="false" aria-expanded="false" >{{ item.title }}</a>
+      {% endif %}
+      {% if item.sublinks %}
+        {% assign menu = item.sublinks %}
+        {% include menu.html submenu=true %}
+      {% endif %}
                 </li>
+    {% endif %}
   {%endfor%}
   {%if include.submenu != true %}
                 <li>
