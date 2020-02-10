@@ -88,3 +88,17 @@ plugins:
  - jemoji
  - sass
  - safe_yaml
+
+exclude:
+  - modernizr-config.json
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - LICENSE
+  - LICENSE.txt
+  - README.md
+  - node_modules
+  - .jshintrc
+  - .gitignore
